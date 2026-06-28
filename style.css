@@ -104,11 +104,35 @@
 
 /*--f1inschools--*/
 .f1inschools{
-    display: flex; 
-    height: 100vh;
+    display: flex;
+    min-height: 100vh;
     color: #252525;
-    min-height: 500px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
+    padding: 100px 0 60px;
+}
+.section-layout{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+}
+.section-text{
+    flex: 1 1 58%;
+}
+.section-media{
+    flex: 1 1 32%;
+    display: flex;
+    justify-content: center;
+}
+.section-media img{
+    display: block;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+}
+.text-3 p{
+    margin-bottom: 16px;
 }
 .f1inschools .text-1{
     font-size:40px;
@@ -143,7 +167,9 @@
 
 }
 .f1inschools img{
-    size-adjust: 60%;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
 }
 
 /*--quem-somos--*/
@@ -387,7 +413,9 @@ opacity:0;
 
 }
 .bullseducation img{
-    size-adjust: 60%;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
 }
 
 /*--Menu--Mobile--*/

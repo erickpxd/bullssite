@@ -82,12 +82,12 @@
     font-weight: 500;
     
 }
-.home .home-content .text-3 span{
+.home .home-content .text-3 a{
     color: #f6ce6c;
     font-weight: 600;
     
 }
-.home .home-content a {
+.home .home-content .button {
     display: inline-block;
     background: #f6ce6c;
     font-size: 25px;
@@ -97,7 +97,7 @@
     border-radius: 6px;
     border: 2px solid #f6ce6c;
 }
-.home .home-content a:hover{
+.home .home-content .button:hover{
     color: #f6ce6c;
     background: none;
 }
@@ -542,7 +542,7 @@ opacity:0;
         font-size: 35px;
        
     }
-    .home .home-content a{
+    .home .home-content .button{
         font-size: 23px;
         padding: 10px 30px;
     }
@@ -556,7 +556,7 @@ opacity:0;
         font-size: 32px;
        
     }
-    .home .home-content a{
+    .home .home-content .button{
         font-size: 20px;
     }
 }

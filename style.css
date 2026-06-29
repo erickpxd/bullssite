@@ -322,15 +322,16 @@
 
 .quemsomos .property-description
 {
-  background-color: transparent;
+  background-color: rgba(37, 37, 37, 0.92);
   height:0%;
-  width:16em;
+  width:100%;
   position:absolute;
   bottom:0em;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   text-align:center;
+  overflow:hidden;
 }
 .quemsomos .property-description p
 {
@@ -348,13 +349,8 @@
 
 .quemsomos .property-card:hover .property-description
 {
-  padding: 0.5em 1em;
   height:10em;
   padding:1em;
-}
-.quemsomos .property-card:hover .property-image
-{
-  height:18em;
 }
 
 .quemsomos .property-image-title
@@ -365,7 +361,6 @@ top:85%;
 opacity:1;
 transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 color:#f6ce6c;
-font-size:100;
 font-family: 'Raleway', sans-serif;
 }
 

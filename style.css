@@ -19,12 +19,12 @@
     z-index: 999;
     width: 100%;
     background: #252525;
-    padding: 25px 0;
+    padding: 16px 0;
     font-family: 'Raleway', sans-serif;
     transition: all 0.3s ease;
 }
 section{
-    scroll-margin-top: 90px;
+    scroll-margin-top: 77px;
 }
 .navbar.sticky{
     color: #252525;
@@ -34,11 +34,15 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: none;
+    padding: 0 120px;
 }
 .navbar .logo a{
     color: #fff;
+    display: inline-block;
     font-size: 35px;
     font-weight: 900;
+    line-height: 1;
 }
 .navbar .logo a span{
     color:#f6ce6c;
@@ -61,7 +65,10 @@ section{
 /*--home-inicio--*/
 .home{
     display: flex;
-    background: url(image/F1_2021.png) no-repeat 1000px;
+    background-image: url(image/F1_2021.png);
+    background-repeat: no-repeat;
+    background-position: right 120px center;
+    background-size: min(46vw, 688px) auto;
     height: 100vh;
     color: #252525;
     min-height: 500px;
@@ -96,17 +103,15 @@ section{
     display: inline-block;
     background: #f6ce6c;
     font-size: 25px;
-    color: #252525;
+    color: #fff;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid #f6ce6c;
-    box-shadow: 0 10px 24px rgba(246, 206, 108, 0.24);
 }
 .home .home-content .button:hover{
     color: #f6ce6c;
     background: none;
-    box-shadow: 0 8px 20px rgba(37, 37, 37, 0.08);
 }
 
 /*--f1inschools--*/
@@ -435,16 +440,30 @@ opacity:0;
 .footer{
     background-color: #252525;
     color: white;
-    display: flex;
     width: 100%;
-    height: 250px;
 }
-.footer .logofooter{
-    height: 100%;
-    width: 50%;
+.footer .footer-content{
     display: flex;
-    justify-content: center;
+    min-height: 250px;
     align-items: center;
+}
+.footer .footer-brand{
+    width: 50%;
+    font-family: 'Raleway', sans-serif;
+}
+.footer .footer-brand h3{
+    color: #fff;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+}
+.footer .footer-brand h3 span{
+    color: #f6ce6c;
+}
+.footer .footer-brand p{
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 15px;
+    margin-top: 12px;
 }
 .footer .footernav{
     justify-content: center;
@@ -452,7 +471,7 @@ opacity:0;
     flex-direction: column;
     display: flex;
     width: 50%;
-    height: 100%;
+    margin-left: auto;
 
 }
 
@@ -500,16 +519,17 @@ opacity:0;
         font-size: 25px;
     }
     .home{
-        display: flex;
-        background: url(image/F1_2021.png) no-repeat 600px;
-        height: 100vh;
-        color: #252525;
-        min-height: 500px;
-        font-family: 'Raleway', sans-serif;
+        background-position: right 40px center;
+        background-size: 52vw auto;
     }
 
 
 
+}
+@media (max-width: 1240px){
+    .home{
+        background: transparent;
+    }
 }
 @media (max-width: 1104px){
     .navbar .max-width{
@@ -517,12 +537,7 @@ opacity:0;
 
     }
     .home{
-        display: flex;
         background: transparent;
-        height: 100vh;
-        color: #252525;
-        min-height: 500px;
-        font-family: 'Raleway', sans-serif;
     }
     .quemsomos .property-card{
         height: 300px;
@@ -593,17 +608,23 @@ opacity:0;
         font-size: 64px;
     }
     .footer{
-        height: auto;
         padding: 40px 0;
-        flex-direction: column;
     }
-    .footer .logofooter,
+    .footer .footer-content{
+        flex-direction: column;
+        min-height: auto;
+        gap: 32px;
+    }
+    .footer .footer-brand{
+        width: 100%;
+        text-align: center;
+    }
+    .footer .footer-brand h3{
+        font-size: 34px;
+    }
     .footer .footernav{
         width: 100%;
-    }
-    .footer .logofooter img{
-        max-width: 260px;
-        width: 80%;
+        margin-left: 0;
     }
     .footer .navfooter ul,
     .footer .footerlinks ul{
@@ -614,9 +635,6 @@ opacity:0;
 @media (max-width: 690px){
     .max-width{
         padding: 0 28px;
-    }
-    .home .max-width{
-        margin: auto 0;
     }
     .home .home-content .text-1{
         font-size: 58px;

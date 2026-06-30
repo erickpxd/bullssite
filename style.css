@@ -96,15 +96,17 @@ section{
     display: inline-block;
     background: #f6ce6c;
     font-size: 25px;
-    color: #fff;
+    color: #252525;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid #f6ce6c;
+    box-shadow: 0 10px 24px rgba(246, 206, 108, 0.24);
 }
 .home .home-content .button:hover{
     color: #f6ce6c;
     background: none;
+    box-shadow: 0 8px 20px rgba(37, 37, 37, 0.08);
 }
 
 /*--f1inschools--*/

@@ -123,6 +123,24 @@ section{
     align-items: center;
     padding: 100px 0 60px;
 }
+.f1inschools .max-width{
+    max-width: none;
+    width: 100%;
+    padding: 0 120px;
+}
+.f1inschools .section-layout{
+    gap: 72px;
+}
+.f1inschools .section-text{
+    flex: 1 1 auto;
+}
+.f1inschools .section-media{
+    flex: 0 0 280px;
+    justify-content: flex-end;
+}
+.f1inschools .section-media img{
+    max-width: 260px;
+}
 .section-layout{
     display: flex;
     align-items: center;
@@ -603,6 +621,12 @@ opacity:0;
     }
     .section-media{
         width: 100%;
+    }
+    .f1inschools .max-width{
+        padding: 0 50px;
+    }
+    .f1inschools .section-media{
+        display: none;
     }
     .quemsomos h2{
         font-size: 64px;

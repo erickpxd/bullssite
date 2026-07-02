@@ -207,20 +207,29 @@ section{
 .quemsomos
 {
   min-height: 100vh;
-  padding: 100px 0 60px;
+  padding: 0 0 80px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.quemsomos .max-width
+{
+  max-width: none;
+  padding: 0;
+  width: 100%;
 }
 
 .quemsomos h2
 {
  font-family: 'Raleway', sans-serif;
- font-size: 110px;
+ font-size: clamp(120px, 15vw, 285px);
  font-weight: 900;
- display: flex;
- justify-content: center;
+ line-height: 0.8;
+ text-align: center;
+ white-space: nowrap;
  color: #252525;
- margin-bottom: 40px;
+ margin: 0 0 150px;
 }
 .quemsomos h5
 {
@@ -245,10 +254,13 @@ section{
 .quemsomos .center
 {
   width:100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  gap: 28px;
+  gap: 48px;
   flex-wrap: wrap;
 }
 
@@ -401,6 +413,21 @@ opacity:0;
     align-items: center;
     padding: 100px 0 60px;
 }
+.bullseducation .max-width{
+    max-width: none;
+    width: 100%;
+    padding: 0 80px;
+}
+.bullseducation .section-layout{
+    gap: 72px;
+}
+.bullseducation .section-text{
+    flex: 1 1 auto;
+}
+.bullseducation .section-media{
+    flex: 0 0 280px;
+    justify-content: flex-end;
+}
 
 .bullseducation .text-1{
     font-family: 'Raleway', sans-serif;
@@ -435,7 +462,7 @@ opacity:0;
 
 }
 .bullseducation img{
-    max-width: 320px;
+    max-width: 245px;
     width: 100%;
     height: auto;
 }
@@ -628,8 +655,19 @@ opacity:0;
     .f1inschools .section-media{
         display: none;
     }
+    .bullseducation .max-width{
+        padding: 0 50px;
+    }
+    .bullseducation .section-media{
+        display: none;
+    }
     .quemsomos h2{
         font-size: 64px;
+        line-height: 1;
+        margin-bottom: 40px;
+    }
+    .quemsomos .center{
+        justify-content: center;
     }
     .footer{
         padding: 40px 0;
@@ -684,6 +722,7 @@ opacity:0;
     }
     .quemsomos h2{
         font-size: 42px;
+        white-space: normal;
     }
     .quemsomos .property-card{
         width: 100%;

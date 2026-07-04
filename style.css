@@ -6,9 +6,12 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+:root{
+    --page-gutter: 120px;
+}
 .max-width{
     max-width: 1300px;
-    padding: 0 80px;
+    padding: 0 var(--page-gutter);
     margin: auto;
 }
 /*--navbar--inicio*/
@@ -35,7 +38,7 @@ section{
     align-items: center;
     justify-content: space-between;
     max-width: none;
-    padding: 0 120px;
+    padding: 0 var(--page-gutter);
 }
 .navbar .logo a{
     color: #fff;
@@ -67,7 +70,7 @@ section{
     display: flex;
     background-image: url(image/F1_2021.png);
     background-repeat: no-repeat;
-    background-position: right 120px center;
+    background-position: right var(--page-gutter) center;
     background-size: min(46vw, 688px) auto;
     height: 100vh;
     color: #252525;
@@ -75,7 +78,10 @@ section{
     font-family: 'Raleway', sans-serif;
 }
 .home .max-width{
-    margin: auto 0 auto 40px;
+    max-width: none;
+    width: 100%;
+    margin: auto 0;
+    padding: 0 var(--page-gutter);
 }
 .home .home-content .text-1{
     font-size: 90px;
@@ -126,7 +132,7 @@ section{
 .f1inschools .max-width{
     max-width: none;
     width: 100%;
-    padding: 0 120px;
+    padding: 0 var(--page-gutter);
 }
 .f1inschools .section-layout{
     gap: 72px;
@@ -254,9 +260,9 @@ section{
 .quemsomos .center
 {
   width:100%;
-  max-width: 1450px;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--page-gutter);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -416,7 +422,7 @@ opacity:0;
 .bullseducation .max-width{
     max-width: none;
     width: 100%;
-    padding: 0 80px;
+    padding: 0 var(--page-gutter);
 }
 .bullseducation .section-layout{
     gap: 72px;
@@ -492,7 +498,7 @@ opacity:0;
     min-height: 235px;
     align-items: center;
     max-width: none;
-    padding: 0 120px;
+    padding: 0 var(--page-gutter);
     width: 100%;
 }
 .footer .footer-brand{
@@ -566,8 +572,8 @@ opacity:0;
         font-size: 25px;
     }
     .home{
-        background-position: right 40px center;
-        background-size: 52vw auto;
+        background-position: right var(--page-gutter) center;
+        background-size: 46vw auto;
     }
 
 
@@ -596,14 +602,17 @@ opacity:0;
 
 }
 @media (max-width: 991px){
+    :root{
+        --page-gutter: 50px;
+    }
     .navbar .max-width{
-        padding: 0 50px;
+        padding: 0 var(--page-gutter);
 
     }
 }
 @media (max-width: 947px){
     .max-width{
-        padding: 0 50px;
+        padding: 0 var(--page-gutter);
     }
     .menu-btn{
         display: block;
@@ -652,13 +661,13 @@ opacity:0;
         width: 100%;
     }
     .f1inschools .max-width{
-        padding: 0 50px;
+        padding: 0 var(--page-gutter);
     }
     .f1inschools .section-media{
         display: none;
     }
     .bullseducation .max-width{
-        padding: 0 50px;
+        padding: 0 var(--page-gutter);
     }
     .bullseducation .section-media{
         display: none;
@@ -678,7 +687,7 @@ opacity:0;
         flex-direction: column;
         min-height: auto;
         gap: 32px;
-        padding: 0 50px;
+        padding: 0 var(--page-gutter);
     }
     .footer .footer-brand{
         width: 100%;
@@ -702,8 +711,11 @@ opacity:0;
 
 }
 @media (max-width: 690px){
+    :root{
+        --page-gutter: 28px;
+    }
     .max-width{
-        padding: 0 28px;
+        padding: 0 var(--page-gutter);
     }
     .home .home-content .text-1{
         font-size: 58px;

@@ -307,8 +307,9 @@ section{
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url(image/Gabriel\ Lins.png);
+  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url("image/gabriel-lins.png");
   background-size:cover;
+  background-position: 35% top;
   background-repeat:no-repeat;
 }
 
@@ -323,8 +324,9 @@ section{
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url(image/Jorge\ Freitas.png);
+  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url("image/jorge-freitas.png");
   background-size:cover;
+  background-position: 35% center;
   background-repeat:no-repeat;
 }
 
@@ -339,8 +341,25 @@ section{
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url(image/Vitor\ Câmara.png);
+  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url("image/vitor-camara.png");
   background-size:cover;
+  background-position: 25% center;
+  background-repeat:no-repeat;
+}
+
+.quemsomos .property-erick
+{
+  height:100%;
+  width:100%;
+  padding:1em 2em;
+  position:Absolute;
+  top:0px;
+  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url("image/erick-monteiro.png");
+  background-size:cover;
+  background-position: 35% center;
   background-repeat:no-repeat;
 }
 
@@ -355,8 +374,9 @@ section{
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url(image/Yasmim\ Jaques.png);
+  background-image:linear-gradient(to bottom, transparent 30%, #252525 95%), url("image/yasmim-jaques.png");
   background-size:cover;
+  background-position: 35% center;
   background-repeat:no-repeat;
 }
 
@@ -365,35 +385,51 @@ section{
 
 .quemsomos .property-description
 {
-  background-color: rgba(37, 37, 37, 0.92);
-  height:0%;
+  background: linear-gradient(to bottom, rgba(37, 37, 37, 0.02) 0%, rgba(37, 37, 37, 0.48) 52%, rgba(37, 37, 37, 0.94) 100%);
+  height:100%;
   width:100%;
   position:absolute;
-  bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:0 1.25em 58px;
+  -webkit-transition:opacity 0.35s ease, -webkit-transform 0.35s ease;
+  -o-transition:opacity 0.35s ease, transform 0.35s ease;
+  transition:opacity 0.35s ease, transform 0.35s ease, -webkit-transform 0.35s ease;
   text-align:center;
   overflow:hidden;
+  opacity:0;
+  pointer-events:none;
+  -webkit-transform:translateY(18px);
+  -ms-transform:translateY(18px);
+  transform:translateY(18px);
 }
 .quemsomos .property-description p
 {
-  padding-top: 5px;
   color: #fff;
+  font-size: 12px;
+  line-height: 1.25;
+  padding-top: 6px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .quemsomos .property-description h5
 {
-  padding-top: 10px;
   color: #f6ce6c;
+  font-size: 1.45em;
+  line-height: 1.05;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Property Cards Hover States */
 
 .quemsomos .property-card:hover .property-description
 {
-  height:10em;
-  padding:1em;
+  opacity:1;
+  -webkit-transform:translateY(0);
+  -ms-transform:translateY(0);
+  transform:translateY(0);
 }
 
 .quemsomos .property-image-title

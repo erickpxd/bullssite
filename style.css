@@ -8,6 +8,7 @@
 }
 :root{
     --page-gutter: 120px;
+    --site-black: #252525;
 }
 .max-width{
     max-width: 1300px;
@@ -21,7 +22,7 @@
     left: 0;
     z-index: 999;
     width: 100%;
-    background: #252525;
+    background: var(--site-black);
     padding: 16px 0;
     font-family: 'Raleway', sans-serif;
     transition: all 0.3s ease;
@@ -268,6 +269,11 @@ section{
   align-items: center;
   gap: 48px;
   flex-wrap: wrap;
+}
+
+.quemsomos .team-carousel-progress
+{
+  display: none;
 }
 
 /* End Non-Essential  */
@@ -528,6 +534,7 @@ opacity:0;
     background-color: #252525;
     color: white;
     width: 100%;
+    scroll-margin-top: 77px;
 }
 .footer .footer-content{
     display: flex;
@@ -611,6 +618,9 @@ opacity:0;
         background-position: right var(--page-gutter) center;
         background-size: 46vw auto;
     }
+    .quemsomos .center{
+        justify-content: center;
+    }
 
 
 
@@ -618,6 +628,33 @@ opacity:0;
 @media (max-width: 1240px){
     .home{
         background: transparent;
+    }
+    .footer{
+        padding: 40px 0;
+    }
+    .footer .footer-content{
+        flex-direction: column;
+        min-height: auto;
+        gap: 32px;
+    }
+    .footer .footer-brand{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer .footer-brand img{
+        width: 150px;
+    }
+    .footer .footer-brand h3{
+        font-size: 56px;
+    }
+    .footer .footernav{
+        width: 100%;
+        margin-left: 0;
+    }
+    .footer .navfooter ul,
+    .footer .footerlinks ul{
+        text-align: center;
     }
 }
 @media (max-width: 1104px){
@@ -660,7 +697,7 @@ opacity:0;
         height: 100vh;
         left: -100%;
         top: 0;
-        background: #252525;
+        background: var(--site-black);
         padding-top: 80px;
         text-align: center;
         transition: all 0.3s ease;
@@ -716,35 +753,6 @@ opacity:0;
     .quemsomos .center{
         justify-content: center;
     }
-    .footer{
-        padding: 40px 0;
-    }
-    .footer .footer-content{
-        flex-direction: column;
-        min-height: auto;
-        gap: 32px;
-        padding: 0 var(--page-gutter);
-    }
-    .footer .footer-brand{
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .footer .footer-brand img{
-        width: 150px;
-    }
-    .footer .footer-brand h3{
-        font-size: 56px;
-    }
-    .footer .footernav{
-        width: 100%;
-        margin-left: 0;
-    }
-    .footer .navfooter ul,
-    .footer .footerlinks ul{
-        text-align: center;
-    }
-
 }
 @media (max-width: 690px){
     :root{
@@ -793,5 +801,54 @@ opacity:0;
     }
     .footer .footer-brand h3{
         font-size: 42px;
+    }
+}
+@media (max-width: 520px){
+    .quemsomos{
+        min-height: auto;
+        padding-bottom: 70px;
+    }
+    .quemsomos .quemsomos-content{
+        overflow: hidden;
+        padding-bottom: 28px;
+    }
+    .quemsomos .center{
+        --team-carousel-offset: 0px;
+        --team-card-width: min(74vw, 250px);
+        width: max-content;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 28px;
+        touch-action: pan-y;
+        transform: translate3d(var(--team-carousel-offset), 0, 0);
+        transition: transform 0.5s ease;
+        will-change: transform;
+    }
+    .quemsomos .property-card{
+        flex: 0 0 var(--team-card-width);
+        width: var(--team-card-width);
+        max-width: none;
+        height: 340px;
+    }
+    .quemsomos .team-carousel-progress{
+        --team-carousel-progress: 20%;
+        display: block;
+        width: min(112px, 34vw);
+        height: 3px;
+        margin: 22px auto 0;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(37, 37, 37, 0.12);
+    }
+    .quemsomos .team-carousel-progress span{
+        display: block;
+        width: var(--team-carousel-progress);
+        height: 100%;
+        border-radius: inherit;
+        background: var(--site-black);
+        transition: width 0.45s ease;
     }
 }
